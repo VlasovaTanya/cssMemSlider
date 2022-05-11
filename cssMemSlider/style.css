@@ -14,3 +14,7 @@ margin: 0 auto;
     width: 50%;
     line-height: 0;
 }
+#overflow{/*скрывает все, что за пределами этого блока*/
+    width: 100%;
+    overflow: hidden;
+}
