@@ -1,0 +1,16 @@
+#slider{/*положение слайдера*/
+    position: relative;
+    text-align: center;
+    top: 1rem;
+}
+#slider{/*центровка слайдера*/
+margin: 0 auto;
+}
+#slider article{/*изо справа друг от друга*/
+    width: 20%;
+    float: left;
+}
+#slider .image{/*устанавливает общий размер блока*/
+    width: 50%;
+    line-height: 0;
+}
