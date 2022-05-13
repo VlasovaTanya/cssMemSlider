@@ -1,11 +1,27 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    max-height: 50rem;
+}
 #slider{/*положение слайдера*/
     position: relative;
-    text-align: center;
     top: 2rem;
     margin: 0 auto;
+    max-height: 50rem;
 }
 #slider{/*центровка слайдера*/
 margin: 0 auto;
+}
+p{
+    margin-top: 5%;
+    text-align: left;
+    font-family: Georgia;
+    font-size: 125%;
+
 }
 #slider article{/*изо справа друг от друга*/
     width: 20%;
@@ -23,34 +39,12 @@ article img{/*размер изо слайдера*/
     width: 100%;
 }
 #desktop:checked ~ #slider{/*размер всего слайдера*/
-    max-width: 960px;/*макс длина*/
+    max-width: 50rem;/*макс длина*/
 } 
-/*настройка переключения и положения левой кнопки*/
-#switch1:checked ~ #controls label:nth-child(4),
-#switch2:checked ~ #controls label:nth-child(1),
-#switch3:checked ~ #controls label:nth-child(2),
-#switch4:checked ~ #controls label:nth-child(3){
-    background: url('pic/prev.png') no-repeat;/*заливка фона картинкой */
-    float: left;
-    margin: 0 0 0 -8rem;
-    display: block;
-    height: 4rem;
-    width: 4rem;
-}
-/*настройка положения правой кнопки*/
-#switch1:checked ~ #controls label:nth-child(2),
-#switch2:checked ~ #controls label:nth-child(3),
-#switch3:checked ~ #controls label:nth-child(4),
-#switch4:checked ~ #controls label:nth-child(1){
-    background: url('pic/next.png') no-repeat;/*заливка фона картинкой */
-    float: right;
-    margin: 0 -8rem 0 0;
-    display: block;
-    height: 4rem;
-    width: 4rem;
-}
+
 label, a{
     cursor: pointer;
+    border-radius: 3rem;
 }
 .all input{
     display: none;
@@ -67,21 +61,17 @@ label, a{
 #switch4:checked ~ #slides .image{
     margin-left: -300%;
 }
-#controls{/* положение блока всех управляющих елементов */
-    margin: -25% 0 0 0;
-    width: 100%;
-    height: 4rem;
-}
+
 #active label{/* стиль отдельного переключателя */
-    border-radius: 10px;
+    border-radius: 3rem;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 1.5rem;
+    height: 1.5rem;
     background: #bbb;
 }
 #active{/* расположение блока с переключателями */
-    margin: 23% 0 0;
-    text-align: center;
+    margin: -4% 0 0;
+    text-align: right;
 }
 #active label:hover{ /* поведение чекбокса при наведении */
     background: #767676;
@@ -102,4 +92,17 @@ label, a{
 }
 #controls label{
     transition: 0.2s ease-out;
+}
+@media (max-width: 767px) {
+    #active{/* расположение блока с переключателями */
+        margin: -10% 0 0;
+        text-align: center;
+    }
+    p{
+        margin-top: 10%;
+        text-align: left;
+        font-family: Georgia;
+        font-size: 125%;
+    
+    }
 }
