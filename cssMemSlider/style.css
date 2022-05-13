@@ -21,6 +21,7 @@ p{
     text-align: left;
     font-family: Georgia;
     font-size: 125%;
+    
 
 }
 #slider article{/*изо справа друг от друга*/
@@ -44,7 +45,12 @@ article img{/*размер изо слайдера*/
 
 label, a{
     cursor: pointer;
-    border-radius: 3rem;
+    
+}
+#active:hover{
+    cursor: pointer;  
+ 
+    
 }
 .all input{
     display: none;
@@ -74,6 +80,7 @@ label, a{
     text-align: right;
 }
 #active label:hover{ /* поведение чекбокса при наведении */
+    box-shadow: inset 0 0 0 10%;
     background: #767676;
     border-color: #777 !important;
 }
@@ -85,14 +92,10 @@ label, a{
     border-color: #18a3dd !important;
 }
 #slides .image{ /* анимация пролистывания изображений */
-    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition: all 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    
 }
-#controls label:hover{
-    opacity: 0.6;
-}
-#controls label{
-    transition: 0.2s ease-out;
-}
+
 @media (max-width: 767px) {
     #active{/* расположение блока с переключателями */
         margin: -10% 0 0;
