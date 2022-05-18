@@ -8,8 +8,7 @@
     max-height: 50rem;
 }
 #slider{/*положение слайдера*/
-    position: relative;
-    top: 2rem;
+    
     margin: 0 auto;
     max-height: 50rem;
 }
@@ -26,7 +25,7 @@ p{
 }
 #slider article{/*изо справа друг от друга*/
     width: 20%;
-    float: left;
+    display:inline-block;
 }
 #slides .image{/*устанавливает общий размер блока*/
     width: 500%;
@@ -62,10 +61,10 @@ label, a{
     margin-left: -100%;
 }
 #switch3:checked ~ #slides .image{
-    margin-left: -200%;
+    margin-left: -201%;
 }
 #switch4:checked ~ #slides .image{
-    margin-left: -300%;
+    margin-left: -301%;
 }
 
 #active label{/* стиль отдельного переключателя */
@@ -106,6 +105,21 @@ label, a{
         text-align: left;
         font-family: Georgia;
         font-size: 125%;
+    
+    }
+}
+@media (max-width: 490px) {
+    #active{/* расположение блока с переключателями */
+        order:1;
+        margin: -18% 0 0;
+        text-align: center;
+        height: 80%;
+    }
+    p{
+        order: 2;
+        margin-top: 17%;
+        text-align: left;
+        font-size: 100%;
     
     }
 }
